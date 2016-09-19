@@ -24,8 +24,8 @@ def getFileHistogram(n, fileName):
 			fHistogram = mergeDicts(fHistogram, hist)
 			count += c;
 
-	print fHistogram
-	print count
+	#print fHistogram
+	#print count
 
 	for key, value in fHistogram.items():
 		fHistogram[key] = value/count
@@ -73,13 +73,14 @@ def getScoreFromDicts(dict1, dict2):
 
 argc = len(sys.argv)
 n = int(sys.argv[2])
-file1 = sys.argv[1]
+file1 = sys.argv[1]	
 
 best = -1;
 bestname = "none"
 for i in range(3, argc):
-	tmp = sim(file1, sys.argv[i])
-	print "Sim(\"" + file1 + "\", \"" + sys.argv[i] + "\") = " + str(tmp)
+	tmp = round(sim(file1, sys.argv[i]), 3)
+	tmp += 0
+	print "Sim(\"" + file1 + "\", \"" + sys.argv[i] + "\") = {:.3f}".format(tmp)#round(tmp, 3))
 	if tmp >= best:
 		best=tmp
 		bestname = sys.argv[i]
