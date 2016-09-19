@@ -11,31 +11,26 @@ def sim(x, y):
 
 def getFileHistogram(n, fileName):
 	fHistogram = {}
-	count = 0;
+	nGrams = 0;
 
 	f = open(fileName)
 	for line in f:
 		if len(line) < n:
 			continue
-
 		words = line.split()
 		for i in range(len(words)):
-			hist, c = getNGram(n, words[i])
-			fHistogram = mergeDicts(fHistogram, hist)
-			count += c;
+			getNGram(fHistogram, n, words[i])
 
-	#print fHistogram
-	#print count
-
+	for value in fHistogram.values():
+		nGrams += value
+		
 	for key, value in fHistogram.items():
-		fHistogram[key] = value/count
+		fHistogram[key] = value/nGrams
 	
 	f.close()
 	return fHistogram
 		
-def getNGram(size, str):
-	histogram = {}
-
+def getNGram(histogram, size, str):
 	for i in range(0, len(str) - (size-1)):
 		tmp = ""
 		for k in range(size):
@@ -46,15 +41,6 @@ def getNGram(size, str):
 			histogram[tmp] = 1
 
 	return histogram, (len(str) - (size-1))
-
-def mergeDicts(dict1, dict2):
-	for key, value in dict2.items():
-		if dict1.has_key(key):
-			dict1[key] += value
-		else:
-			dict1[key] = value
-
-	return dict1
 
 def getScoreFromDicts(dict1, dict2):
 	score = 0.0
