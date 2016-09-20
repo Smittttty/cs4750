@@ -1,7 +1,7 @@
 #########################################################
 ##  CS 4750 (Fall 2016), Assignment #1, Question #3    ##
 ##   Script File Name: index1.py                       ##
-##       Student Name: Adam Smith	                   ##
+##       Student Name: Adam Smith                      ##
 ##         Login Name: aes702                          ##
 ##              MUN #: 201036597                       ##
 #########################################################

@@ -1,7 +1,7 @@
 #########################################################
 ##  CS 4750 (Fall 2016), Assignment #1, Question #2    ##
 ##   Script File Name: tcomp2.py                       ##
-##       Student Name: Adam Smith	                   ##
+##       Student Name: Adam Smith                      ##
 ##         Login Name: aes702                          ##
 ##              MUN #: 201036597                       ##
 #########################################################
