@@ -41,7 +41,7 @@ bestname = "none"
 for i in range(2, argc):
 	tmp = round(sim(file1, sys.argv[i]), 3)
 	tmp += 0
-	print "Sim(\"" + file1 + "\", \"" + sys.argv[i] + "\") = {:.3f}".format(tmp)#round(tmp, 3))
+	print "Sim(\"" + file1 + "\", \"" + sys.argv[i] + "\") = {:.3f}".format(tmp)
 	if tmp >= best:
 		best=tmp
 		bestname = sys.argv[i]
