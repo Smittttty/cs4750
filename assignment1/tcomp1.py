@@ -1,10 +1,13 @@
+#########################################################
+##  CS 4750 (Fall 2016), Assignment #1, Question #1    ##
+##   Script File Name: tcomp1.py                       ##
+##       Student Name: Adam Smith	                   ##
+##         Login Name: aes702                          ##
+##              MUN #: 201036597                       ##
+#########################################################
+
 from __future__ import division
 import sys
-
-
-file1 = "./nm1.dat"
-file2 = "./nm3.dat"
-n = 3;
 
 def sim(x, y):
 	return getScoreFromDicts(getFileHistogram(n, x), getFileHistogram(n, y))
@@ -60,9 +63,9 @@ def getScoreFromDicts(dict1, dict2):
 argc = len(sys.argv)
 n = int(sys.argv[2])
 file1 = sys.argv[1]	
-
 best = -1;
 bestname = "none"
+
 for i in range(3, argc):
 	tmp = round(sim(file1, sys.argv[i]), 3)
 	tmp += 0
@@ -73,4 +76,3 @@ for i in range(3, argc):
 
 print "File " + "\"" + file1 + "\" is most similar to file \"" + bestname + "\"."
 
-#compare(file1, file2)
