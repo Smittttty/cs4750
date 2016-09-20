@@ -28,7 +28,6 @@ def getLineNumbers(ignored, fileName):
 	lineNumber = 1
 	for line in f:
 		for word in line.split():
-			#word = word.lower()
 			word = word.translate(None, string.punctuation)
 			if not len(word) > 0:
 				continue

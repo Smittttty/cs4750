@@ -19,6 +19,8 @@ def nW(fileName):
 		for word in line.split():
 			if not word in words:
 				words.add(word)
+				
+	f.close()
 	return words
 
 def SD(x, y):
