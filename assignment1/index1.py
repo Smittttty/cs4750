@@ -6,7 +6,6 @@
 ##              MUN #: 201036597                       ##
 #########################################################
 
-from __future__ import division
 import sys
 import string
 import collections
