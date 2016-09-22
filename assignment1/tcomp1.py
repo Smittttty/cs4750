@@ -64,7 +64,7 @@ def getFileHistogram(n, fileName):
 ## return: histogram, numbr of ngrams in str
 #########################
 def getNGram(histogram, size, str):
-	if(len(str) < size)
+	if(len(str) < size):
 		return
 
 	#iterate through string
@@ -120,7 +120,7 @@ bestname = "none"
 #loop through remaining files
 for i in range(3, argc):
 	##alculate score, +=0 is to fix negative 0.
-	tmp = round(sim(file1, sys.argv[i]), 3)
+	tmp = round(sim(n, file1, sys.argv[i]), 3)
 	tmp += 0
 	#print file store
 	print "Sim(\"" + file1 + "\", \"" + sys.argv[i] + "\") = {:.3f}".format(tmp)

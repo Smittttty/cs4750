@@ -23,8 +23,10 @@ def loadIgnoreList(fileName):
 
 	#read each word in file
 	for line in f:
-		#add word to set
-		words.add(word)
+		for word in line.split():
+			#add word to set
+			print word
+			words.add(word)
 
 	#close file
 	f.close()
