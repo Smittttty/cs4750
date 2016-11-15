@@ -9,5 +9,5 @@ PN -> "Alice"
 PN -> "Bob"
 VP -> V NP
 V -> "admired" 
-V -> "bit" 
+V -> "bit"
 V -> "chased"
